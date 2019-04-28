@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/welcome")
 public class WelcomeBackEndController {
     static final Logger lOGGER = LoggerFactory.getLogger(WelcomeBackEndController.class);
+
     @Rpc
     @RequestMapping(value = "/info", method = RequestMethod.GET)
     public String info() {
-        System.out.println("welcome c'est " + String.valueOf(ApplicationInfoManager.getInstance().getInfo().getPort()) + " qui a répondit");
-        return "welcome info c'est " + String.valueOf(ApplicationInfoManager.getInstance().getInfo().getPort()) + " qui a répondit";
+        return "welcome " + String.valueOf(ApplicationInfoManager.getInstance().getInfo().getPort()) + "  has responded";
     }
 }
