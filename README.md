@@ -36,3 +36,9 @@ This solution is not perfect and can be improved, please feel free to submit any
                     plateform : mobile
                     device : Samsung 
                     city : sousse
+              
+10/ data sent to elasticsearch
+        {"executionTime":3,"userName":"user02","device":"Samsung","country":"Tunisia","plateform":"mobile","city":"Sousse","uri":"/welcome/info","controllerName":"WelcomeBackEnd","methodName":"info","microService":"BACK_END_SERVER","port":"8763","url":"http://PRX-LP0014.proxym-it.tn:8763/welcome/info","startRequest":1556456739206}
+
+11/ try to request from the postman
+        http://localhost:9200/dashboard/users_details/_search
