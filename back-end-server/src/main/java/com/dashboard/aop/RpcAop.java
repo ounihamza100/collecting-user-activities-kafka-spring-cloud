@@ -90,7 +90,7 @@ public class RpcAop {
         this.userRequestDetails.setUrl(req.getRequestURL());
         HandlerExecutionChain handlerExecutionChain = this.requestMappingHandlerMapping.getHandler(req);
         HandlerMethod handlerMethod = (HandlerMethod) handlerExecutionChain.getHandler();
-        this.userRequestDetails.setControllerName(handlerMethod.getBeanType().getSimpleName().replace("Controller", ""));
+        this.userRequestDetails.setControllerName(handlerMethod.getBeanType().getSimpleName());
         this.userRequestDetails.setMethodName(handlerMethod.getMethod().getName());
         String port = String.valueOf(ApplicationInfoManager.getInstance().getInfo().getPort());
         String microService = String.valueOf(ApplicationInfoManager.getInstance().getInfo().getAppName());
