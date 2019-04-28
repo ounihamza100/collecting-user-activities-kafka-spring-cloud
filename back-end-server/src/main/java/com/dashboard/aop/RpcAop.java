@@ -81,6 +81,7 @@ public class RpcAop {
         RequestAttributes reqAttr = RequestContextHolder.getRequestAttributes();
         ServletRequestAttributes servlReqAttr = (ServletRequestAttributes) reqAttr;
         HttpServletRequest req = servlReqAttr.getRequest();
+        System.out.println("=============================");
         this.userRequestDetails.setUserName(req.getHeader("name"));
         this.userRequestDetails.setCountry(req.getHeader("country"));
         this.userRequestDetails.setCity(req.getHeader("city"));
@@ -96,6 +97,7 @@ public class RpcAop {
         String microService = String.valueOf(ApplicationInfoManager.getInstance().getInfo().getAppName());
         this.userRequestDetails.setMicroService(microService);
         this.userRequestDetails.setPort(port);
+        System.out.println("=============================");
         return userRequestDetails;
     }
 }
