@@ -38,7 +38,7 @@ public class RpcAop {
     private UserRequestDetails userRequestDetails;
 
     @Around("@annotation(Rpc)")
-    public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
+    public Object sendUserActivity(ProceedingJoinPoint joinPoint) throws Throwable {
         long start = System.currentTimeMillis();
         // prepare userRequestDetails
         userRequestDetails = UserRequestDetails.builder().build();
@@ -56,7 +56,7 @@ public class RpcAop {
         userRequestDetails.setExecutionTime(executionTime);
         //  end set execution Time
 
-        // log to kafka
+        // start sending to kafka
         String str = objectMapper.writeValueAsString(userRequestDetails);
         System.out.println("==========\n " + str + "\n =============");
         Record record = new Record();
@@ -72,7 +72,7 @@ public class RpcAop {
         HttpEntity<String> httpEntity = new HttpEntity<>(rec, headers);
         ResponseEntity<KafkaResponse> response = restTemplate.exchange("http://localhost:8082/topics/userDetails", HttpMethod.POST, httpEntity, KafkaResponse.class);
 
-        //  end log to kafka
+        //  end sending to kafka
         // good bye
         return proceed;
     }
