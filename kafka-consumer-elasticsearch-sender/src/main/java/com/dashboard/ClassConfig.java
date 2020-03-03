@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Properties;
 
 /**
- * Created by haithem.ben-chaaben on 29/03/2019.
+ * Hamza.Ouni
  */
 @Configuration
 public class ClassConfig {

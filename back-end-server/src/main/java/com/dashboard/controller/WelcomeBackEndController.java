@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by haithem.ben-chaaben on 15/01/2019.
+ * Hamza.Ouni
  */
 @RestController
 @RequestMapping("/welcome")

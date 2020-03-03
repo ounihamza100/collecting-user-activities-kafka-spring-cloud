@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * Created by haithem.ben-chaaben on 23/03/2019.
+ * Hamza.Ouni
  */
 @Configuration
 public class ClassConfig {
