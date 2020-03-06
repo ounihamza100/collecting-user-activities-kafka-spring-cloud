@@ -2,9 +2,7 @@ Collecting user activities help entreprise to monitor and track end user behavio
 It also helps to have real-time identification along with detailed reporting of historical activity.
 The main questions to answer are: Who did what, when and where?
 
-**Learning**
-This project is a companion repository to the Linkedin article
-https://www.linkedin.com/pulse/collecting-user-activities-microservices-application-kafka-haithem/
+
 
 **Contributing**
 This solution is not perfect and can be improved, please feel free to submit any PR you deem useful.
